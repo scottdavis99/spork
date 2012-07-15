@@ -25,9 +25,9 @@
 				square.style.top = e.targetTouches[0].screenY + "px"				
 			},false);
 			
-			document..addEventListener('touchmove', function(e){
+			document.addEventListener('touchmove', function(e){
 				e.preventDefault();
-			}
+			},false);
 		}
 		
 	  window.onload = init;	
