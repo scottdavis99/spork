@@ -24,6 +24,10 @@
 				square.style.left = e.targetTouches[0].screenX + "px"
 				square.style.top = e.targetTouches[0].screenY + "px"				
 			},false);
+			
+			document..addEventListener('touchmove', function(e){
+				e.preventDefault();
+			}
 		}
 		
 	  window.onload = init;	
