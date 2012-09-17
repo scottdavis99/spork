@@ -33,29 +33,32 @@
 		}
 		
 		function checkArrowKeys(e){
-		    var arrs= [], key= window.event? event.keyCode: e.keyCode;
+		    var arrs= []
+		    var key= window.event? event.keyCode: e.keyCode;
 		    arrs[37]= 'left';
 		    arrs[38]= 'up';
 		    arrs[39]= 'right';
 		    arrs[40]= 'down';
 			
+			var spork = document.getElementById("spork");
+			
 			switch(key){
-				case arrs[37]:
+				case 37:
+				spork.style.backgroundImage="url('img/blue-w.png')"
 				break;
 				
-				case arrs[38]:
+				case 38:
+				spork.style.backgroundImage="url('img/blue-n.png')"
 				break;
 				
-				case arrs[39]:
+				case 39:
+				spork.style.backgroundImage="url('img/blue-e.png')"
 				break;
 				
-				case arrs[40]:
+				case 40:
+				spork.style.backgroundImage="url('img/blue-s.png')"
 				break;
 			}
-
-
-
-
 		}
 		
 	  window.onload = init;	
