@@ -17,7 +17,9 @@
 
 
 	<script type="text/javascript">	
-		function init(){			
+		function init(){
+			document.onkeydown=checkArrowKeys;
+						
 			document.getElementById("spork").addEventListener('touchmove', function(e){
 				e.preventDefault();
 				var spork = document.getElementById("spork")
@@ -28,6 +30,15 @@
 			document.addEventListener('touchmove', function(e){
 				e.preventDefault();
 			},false);
+		}
+		
+		function checkArrowKeys(e){
+		    var arrs= [], key= window.event? event.keyCode: e.keyCode;
+		    arrs[37]= 'left';
+		    arrs[38]= 'up';
+		    arrs[39]= 'right';
+		    arrs[40]= 'down';
+		    if(arrs[key]) alert(arrs[key]);
 		}
 		
 	  window.onload = init;	
